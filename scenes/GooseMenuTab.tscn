@@ -1,0 +1,1381 @@
+[gd_scene format=3 uid="uid://5uv33j05lshy"]
+
+[ext_resource type="Texture2D" uid="uid://cwaaiy2h4uisf" path="res://textures/icons/cog.png" id="1_dqoid"]
+[ext_resource type="Texture2D" uid="uid://mslomyup1o2x" path="res://mods-unpacked/CoolLikeGoose-GooseMenu/assets/logoBW(icon).png" id="1_hpulc"]
+[ext_resource type="Script" uid="uid://brteo5ih45380" path="res://scripts/themed_icon.gd" id="2_hpulc"]
+[ext_resource type="Script" uid="uid://mnr2vscrnmh3" path="res://mods-unpacked/CoolLikeGoose-GooseMenu/code/GooseMenu.gd" id="3_dqoid"]
+[ext_resource type="Script" uid="uid://bc4qsjgi2ngpc" path="res://scripts/setting_slider.gd" id="3_pgnkw"]
+[ext_resource type="Texture2D" uid="uid://cfx2ybbx62f5a" path="res://textures/ui/steam.png" id="4_2ui3r"]
+[ext_resource type="Texture2D" uid="uid://cxfhwtonbrcha" path="res://mods-unpacked/CoolLikeGoose-GooseMenu/assets/github-white-icon.png" id="5_dqoid"]
+[ext_resource type="Script" uid="uid://dslms8mlkt5p0" path="res://scripts/local_save_slots.gd" id="8_s7vsq"]
+[ext_resource type="PackedScene" path="res://scenes/save_slot_panel.tscn" id="9_3rk5c"]
+[ext_resource type="Script" uid="uid://jc70x56e6pjo" path="res://scripts/customizations_tab.gd" id="10_p55rr"]
+[ext_resource type="Script" uid="uid://dwt0o3kfkjhd1" path="res://scripts/setting_container.gd" id="11_ufaxj"]
+[ext_resource type="Script" uid="uid://cjey6n0b6l2ag" path="res://scripts/setting_button.gd" id="12_y2ecn"]
+[ext_resource type="Script" uid="uid://bgffx6ud4hjke" path="res://scripts/setting_label.gd" id="13_7eppl"]
+[ext_resource type="Texture2D" uid="uid://tkg3atcs574c" path="res://textures/icons/return.png" id="14_uyu84"]
+[ext_resource type="Script" uid="uid://dp6ept6l5jv61" path="res://scripts/reset_setting_button.gd" id="15_mnr4a"]
+[ext_resource type="Script" uid="uid://ltc3oktx32uc" path="res://scripts/account_tab.gd" id="16_d4rhj"]
+[ext_resource type="Texture2D" uid="uid://ca41apt8ebnrs" path="res://textures/icons/reload.png" id="17_qq3or"]
+[ext_resource type="Texture2D" uid="uid://4a31n08xhe8t" path="res://textures/icons/diskette.png" id="18_vc1du"]
+[ext_resource type="Texture2D" uid="uid://4hv1wg7b5277" path="res://textures/icons/palette.png" id="19_1vcdu"]
+[ext_resource type="Texture2D" uid="uid://bs6ay7dcrphy5" path="res://textures/icons/graph.png" id="20_e1vff"]
+[ext_resource type="Texture2D" uid="uid://dc6x2j302urp3" path="res://textures/icons/user.png" id="21_mu6et"]
+
+[node name="GooseMenuTab" type="PanelContainer" unique_id=1020666690]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -20.0
+grow_horizontal = 2
+mouse_force_pass_scroll_events = false
+theme_type_variation = &"ShadowPanelContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=176440579]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TitlePanel" type="Panel" parent="VBoxContainer" unique_id=973691094]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_type_variation = &"OverlayPanelTitle"
+
+[node name="TitleContainer" type="HBoxContainer" parent="VBoxContainer/TitlePanel" unique_id=776116370]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TitlePanel/TitleContainer" unique_id=834121248]
+self_modulate = Color(0.567, 0.69465, 0.9, 1)
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_hpulc")
+expand_mode = 1
+script = ExtResource("2_hpulc")
+
+[node name="Label" type="Label" parent="VBoxContainer/TitlePanel/TitleContainer" unique_id=864517047]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Goose Menu"
+
+[node name="GooseMenuPanel" type="PanelContainer" parent="VBoxContainer" unique_id=1470961158]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"MenuPanel"
+
+[node name="Settings" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel" unique_id=727078019]
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("3_dqoid")
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/GooseMenuPanel/Settings" unique_id=269049286]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"EmptyTabContainer"
+current_tab = 0
+tabs_visible = false
+
+[node name="Preferences" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer" unique_id=2127746845]
+layout_mode = 2
+vertical_scroll_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences" unique_id=990815170]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="SettingsContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer" unique_id=1866694520]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="GameSpeed" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1342310696]
+layout_mode = 2
+
+[node name="LabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed" unique_id=643266904]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer" unique_id=54565152]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "Game Speed"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer" unique_id=1676533829]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+offset_transform_enabled = true
+focus_mode = 0
+min_value = 1.0
+value = 1.0
+scrollable = false
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer" unique_id=878825612]
+layout_mode = 2
+text = "1"
+placeholder_text = "1"
+alignment = 1
+max_length = 6
+emoji_menu_enabled = false
+
+[node name="Links" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1371127204]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Steam" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links" unique_id=1092569801]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 48
+icon = ExtResource("4_2ui3r")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Github" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links" unique_id=388465655]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 68
+icon = ExtResource("5_dqoid")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Example" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=648708970]
+visible = false
+layout_mode = 2
+
+[node name="Notation" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example" unique_id=1657854893]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Notation" unique_id=1532229340]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_notation"
+
+[node name="NotationContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Notation" unique_id=1350170879]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Default" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Notation/NotationContainer" unique_id=617401760]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "default"
+icon_alignment = 1
+metadata/notation = 0
+
+[node name="Latin" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Notation/NotationContainer" unique_id=2062775142]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "latin"
+icon_alignment = 1
+metadata/notation = 1
+
+[node name="Scientific" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Notation/NotationContainer" unique_id=186660401]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "scientific"
+icon_alignment = 1
+expand_icon = true
+metadata/notation = 2
+
+[node name="Engineering" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Notation/NotationContainer" unique_id=885521973]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "engineering"
+icon_alignment = 1
+expand_icon = true
+metadata/notation = 3
+
+[node name="MuteSFX" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example" unique_id=1784753674]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/MuteSFX" unique_id=245305933]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_mute_sfx"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/MuteSFX" unique_id=480121237]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+focus_mode = 0
+flat = true
+
+[node name="VolumeSFX" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example" unique_id=1631929501]
+layout_mode = 2
+
+[node name="LabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/VolumeSFX" unique_id=724534004]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/VolumeSFX/LabelContainer" unique_id=1258509770]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_volume_sfx"
+
+[node name="Value" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/VolumeSFX/LabelContainer" unique_id=1309815042]
+layout_mode = 2
+size_flags_vertical = 8
+text = "100%"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/VolumeSFX" unique_id=1417588256]
+layout_mode = 2
+focus_mode = 0
+max_value = 1.0
+step = 0.01
+scrollable = false
+
+[node name="BgmFrequency" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example" unique_id=1119364885]
+layout_mode = 2
+
+[node name="LabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/BgmFrequency" unique_id=38644747]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/BgmFrequency/LabelContainer" unique_id=947771944]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_bgm_frequency"
+
+[node name="Value" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/BgmFrequency/LabelContainer" unique_id=1689612566]
+layout_mode = 2
+size_flags_vertical = 8
+text = "occasionally"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/BgmFrequency" unique_id=1701012478]
+layout_mode = 2
+focus_mode = 0
+max_value = 4.0
+scrollable = false
+script = ExtResource("3_pgnkw")
+setting = "bgm_frequency"
+
+[node name="Credits" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example" unique_id=1473883750]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -10
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits" unique_id=1547173826]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"ButtonExpand"
+toggle_mode = true
+text = "credits"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits" unique_id=1513411358]
+visible = false
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"MenuExpandPanel"
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/PanelContainer" unique_id=924934167]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.627451, 0.776471, 0.811765, 1)
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "credits_desc"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+drag_and_drop_selection_enabled = false
+
+[node name="Save(For later use)" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer" unique_id=2127833424]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)" unique_id=23880736]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Slots" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer" unique_id=473570157]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+script = ExtResource("8_s7vsq")
+
+[node name="Slot0" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=99543991 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+manual_writable = false
+
+[node name="Slot1" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=308438109 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 1
+
+[node name="Slot2" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=914361060 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 2
+
+[node name="Slot3" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=369721279 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 3
+
+[node name="Slot4" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=614162522 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 4
+
+[node name="Slot5" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=755094212 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 5
+
+[node name="Slot6" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=350837241 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 6
+
+[node name="Slot7" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=904490967 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 7
+
+[node name="Slot8" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=1284328977 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 8
+
+[node name="Slot9" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/ScrollContainer/Slots" unique_id=1863629606 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+display_slot = 9
+
+[node name="SaveOptions" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)" unique_id=503153905]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Sync" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/SaveOptions" unique_id=669171172]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "setting_sync_data"
+
+[node name="Wipe" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/SaveOptions" unique_id=531379210]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "setting_wipe_data"
+
+[node name="Customizations(For later use)" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer" unique_id=1168045135 node_paths=PackedStringArray("premiums")]
+visible = false
+layout_mode = 2
+vertical_scroll_mode = 2
+script = ExtResource("10_p55rr")
+premiums = [NodePath("MarginContainer/SettingsContainer/HideNodeIcon/CheckButton"), NodePath("MarginContainer/SettingsContainer/CenterNodeName/CheckButton"), NodePath("MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer/Chess"), NodePath("MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer/Cross"), NodePath("MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer/Hexagonal"), NodePath("MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer/Starfield"), NodePath("MarginContainer/SettingsContainer/ConnectionStyle/StyleContainer/PCB"), NodePath("MarginContainer/SettingsContainer/ConnectionStyle/StyleContainer/Cables"), NodePath("MarginContainer/SettingsContainer/BackgroundColor/VBoxContainer/HSlider"), NodePath("MarginContainer/SettingsContainer/LinesColor/VBoxContainer/HSlider"), NodePath("MarginContainer/SettingsContainer/SelectionColor/VBoxContainer/HSlider")]
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)" unique_id=1011385242]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="SettingsContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer" unique_id=532301219]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Theme" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=1190035723]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/Theme" unique_id=1063288719]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Theme"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/Theme" unique_id=1529777084]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/Theme/ScrollContainer" unique_id=445120209]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="StyleContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/Theme/ScrollContainer/MarginContainer" unique_id=1273817457]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+script = ExtResource("11_ufaxj")
+setting = "theme_name"
+
+[node name="Default" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/Theme/ScrollContainer/MarginContainer/StyleContainer" unique_id=1788531906]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "Default"
+icon_alignment = 1
+metadata/setting = "default"
+
+[node name="Hologram" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/Theme/ScrollContainer/MarginContainer/StyleContainer" unique_id=994194818]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "Hologram"
+icon_alignment = 1
+metadata/setting = "hologram"
+
+[node name="HideNodeIcon" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=1582372602]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/HideNodeIcon" unique_id=1141954246]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_hide_node_icon"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/HideNodeIcon" unique_id=832706031]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+focus_mode = 0
+flat = true
+script = ExtResource("12_y2ecn")
+setting = "hide_node_icon"
+
+[node name="CenterNodeName" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=2023828132]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/CenterNodeName" unique_id=2050663105]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_center_node_name"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/CenterNodeName" unique_id=863970980]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+focus_mode = 0
+flat = true
+script = ExtResource("12_y2ecn")
+setting = "center_node_title"
+
+[node name="BackgroundStyle" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=39449337]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle" unique_id=1923459772]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_background_style"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle" unique_id=1610535608]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer" unique_id=1937221192]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="StyleContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer" unique_id=1444665135]
+layout_mode = 2
+theme_override_constants/separation = 5
+script = ExtResource("11_ufaxj")
+setting = "lines_type"
+
+[node name="Lines" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=254584493]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "lines"
+icon_alignment = 1
+metadata/setting = 0
+
+[node name="Squares" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=1808636653]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "squares"
+icon_alignment = 1
+metadata/setting = 1
+
+[node name="Chess" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=169722070]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "chess"
+icon_alignment = 1
+metadata/setting = 2
+
+[node name="Cross" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=156823161]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "crosses"
+icon_alignment = 1
+metadata/setting = 3
+
+[node name="Hexagonal" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=1845730904]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "honeycomb"
+icon_alignment = 1
+metadata/setting = 4
+
+[node name="Starfield" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=1870173638]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "starfield"
+icon_alignment = 1
+metadata/setting = 5
+
+[node name="None" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundStyle/ScrollContainer/MarginContainer/StyleContainer" unique_id=2115130670]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "none"
+icon_alignment = 1
+metadata/setting = 6
+
+[node name="BackgroundColor" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=2059902746]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundColor" unique_id=1180964691]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundColor/VBoxContainer" unique_id=157747856]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundColor/VBoxContainer/LabelContainer" unique_id=1242384188]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_background_color"
+
+[node name="Value" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundColor/VBoxContainer/LabelContainer" unique_id=1901835458]
+layout_mode = 2
+size_flags_vertical = 8
+text = "0"
+script = ExtResource("13_7eppl")
+setting = "background_hue"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundColor/VBoxContainer" unique_id=771115841]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ColorSlider"
+max_value = 1.0
+step = 0.01
+scrollable = false
+script = ExtResource("3_pgnkw")
+setting = "background_hue"
+
+[node name="Reset" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/BackgroundColor" unique_id=1557870879]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_type_variation = &"ButtonMenu"
+icon = ExtResource("14_uyu84")
+expand_icon = true
+script = ExtResource("15_mnr4a")
+setting = "background_hue"
+value = 0.612
+
+[node name="LinesColor" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=1269104488]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/LinesColor" unique_id=1563984624]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/LinesColor/VBoxContainer" unique_id=1143275459]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/LinesColor/VBoxContainer/LabelContainer" unique_id=2136366919]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_lines_color"
+
+[node name="Value" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/LinesColor/VBoxContainer/LabelContainer" unique_id=277654570]
+layout_mode = 2
+size_flags_vertical = 8
+text = "0"
+script = ExtResource("13_7eppl")
+setting = "lines_hue"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/LinesColor/VBoxContainer" unique_id=98563105]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ColorSlider"
+max_value = 1.0
+step = 0.01
+scrollable = false
+script = ExtResource("3_pgnkw")
+setting = "lines_hue"
+
+[node name="Reset" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/LinesColor" unique_id=1453925387]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_type_variation = &"ButtonMenu"
+icon = ExtResource("14_uyu84")
+expand_icon = true
+script = ExtResource("15_mnr4a")
+setting = "lines_hue"
+value = 0.6
+
+[node name="SelectionColor" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=1974180108]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/SelectionColor" unique_id=5776923]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/SelectionColor/VBoxContainer" unique_id=951813504]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/SelectionColor/VBoxContainer/LabelContainer" unique_id=195352577]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_selection_color"
+
+[node name="Value" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/SelectionColor/VBoxContainer/LabelContainer" unique_id=1918384132]
+layout_mode = 2
+size_flags_vertical = 8
+text = "0"
+script = ExtResource("13_7eppl")
+setting = "selection_hue"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/SelectionColor/VBoxContainer" unique_id=787038356]
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ColorSlider"
+max_value = 1.0
+step = 0.01
+scrollable = false
+script = ExtResource("3_pgnkw")
+setting = "selection_hue"
+
+[node name="Reset" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/SelectionColor" unique_id=1077169790]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_type_variation = &"ButtonMenu"
+icon = ExtResource("14_uyu84")
+expand_icon = true
+script = ExtResource("15_mnr4a")
+setting = "selection_hue"
+value = 0.086
+
+[node name="ConnectionStyle" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer" unique_id=1694857679]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/ConnectionStyle" unique_id=901072840]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "setting_connection_style"
+
+[node name="StyleContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/ConnectionStyle" unique_id=2023246235]
+layout_mode = 2
+theme_override_constants/separation = 5
+script = ExtResource("11_ufaxj")
+setting = "connection_type"
+
+[node name="Default" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/ConnectionStyle/StyleContainer" unique_id=1764063762]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "default"
+icon_alignment = 1
+metadata/setting = 0
+
+[node name="PCB" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/ConnectionStyle/StyleContainer" unique_id=744550916]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "pcb"
+icon_alignment = 1
+metadata/setting = 1
+
+[node name="Web" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/ConnectionStyle/StyleContainer" unique_id=1011291438]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "web"
+icon_alignment = 1
+metadata/setting = 2
+
+[node name="Cables" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Customizations(For later use)/MarginContainer/SettingsContainer/ConnectionStyle/StyleContainer" unique_id=345852413]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"TabButton"
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "cables"
+icon_alignment = 1
+metadata/setting = 3
+
+[node name="Stats(For later use)" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer" unique_id=1429084407]
+visible = false
+layout_mode = 2
+vertical_scroll_mode = 2
+metadata/_tab_index = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Stats(For later use)" unique_id=771612810]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 5
+
+[node name="StatsContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Stats(For later use)/MarginContainer" unique_id=119090108]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Account(For later use)" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer" unique_id=570304177]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)" unique_id=109991001]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer" unique_id=171205793]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer" unique_id=1870440689]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"EmptyTabContainer"
+current_tab = 2
+tabs_visible = false
+script = ExtResource("16_d4rhj")
+
+[node name="SignIn" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" unique_id=510052135]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+metadata/_tab_index = 0
+
+[node name="IdLabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1601471929]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/IdLabelContainer" unique_id=1284559939]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "username_or_email"
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/IdLabelContainer" unique_id=417829100]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "required"
+horizontal_alignment = 2
+
+[node name="Email" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1592472473]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_next = NodePath("../Password")
+theme_override_font_sizes/font_size = 28
+placeholder_text = "enter_username_or_email"
+max_length = 254
+emoji_menu_enabled = false
+caret_blink = true
+
+[node name="PassLabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=80861083]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/PassLabelContainer" unique_id=986168046]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "password"
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/PassLabelContainer" unique_id=671140288]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "required"
+horizontal_alignment = 2
+
+[node name="Password" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=39470457]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_previous = NodePath("../Email")
+theme_override_font_sizes/font_size = 28
+placeholder_text = "enter_password"
+max_length = 24
+keep_editing_on_text_submit = true
+secret = true
+
+[node name="PasswordReset" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=120046298]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ItemButton"
+theme_override_font_sizes/font_size = 24
+text = "password_reset"
+flat = true
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=364850277]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "Invalid credentials"
+horizontal_alignment = 1
+
+[node name="SignIn" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1706469553]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"ButtonHighlighted"
+text = "sign_in"
+
+[node name="Register" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=591784090]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "register"
+
+[node name="Space2" type="Control" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1496301964]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1041496182]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.270588, 0.333333, 0.458824, 1)
+
+[node name="Space" type="Control" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1389127709]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SignInOptions" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=374383382]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="GoogleSignIn" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/SignInOptions" unique_id=2122677887]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TabButton"
+text = "continue_with_google"
+
+[node name="DiscordSignIn" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/SignInOptions" unique_id=1120539417]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TabButton"
+text = "continue_with_discord"
+
+[node name="SignInStatus" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1853841253]
+visible = false
+layout_mode = 2
+text = "complete_signin_on_browser"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SignInCancel" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn" unique_id=1650108622]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_type_variation = &"TabButton"
+text = "cancel_signin"
+
+[node name="Recover" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" unique_id=2114753205]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 5
+metadata/_tab_index = 1
+
+[node name="EmailLabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover" unique_id=1926129582]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover/EmailLabelContainer" unique_id=2092337970]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "email"
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover/EmailLabelContainer" unique_id=1723866299]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "required"
+horizontal_alignment = 2
+
+[node name="Email" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover" unique_id=309410110]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+placeholder_text = "enter_email"
+max_length = 254
+emoji_menu_enabled = false
+caret_blink = true
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover" unique_id=1855243967]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "Invalid credentials"
+horizontal_alignment = 1
+
+[node name="Send" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover" unique_id=1649722681]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "send"
+
+[node name="Return" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover" unique_id=1367803296]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "return"
+
+[node name="Register" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" unique_id=600683588]
+layout_mode = 2
+theme_override_constants/separation = 5
+metadata/_tab_index = 2
+
+[node name="UserLabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=314841284]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/UserLabelContainer" unique_id=1471311423]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "username"
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/UserLabelContainer" unique_id=1496729137]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "required"
+horizontal_alignment = 2
+
+[node name="Username" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=1461451213]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_next = NodePath("../Email")
+theme_override_font_sizes/font_size = 28
+placeholder_text = "type_username"
+max_length = 32
+emoji_menu_enabled = false
+caret_blink = true
+
+[node name="EmailLabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=814854063]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/EmailLabelContainer" unique_id=814040075]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "email"
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/EmailLabelContainer" unique_id=927392898]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "required"
+horizontal_alignment = 2
+
+[node name="Email" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=1593702734]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_next = NodePath("../Password")
+focus_previous = NodePath("../Username")
+theme_override_font_sizes/font_size = 28
+placeholder_text = "type_email"
+max_length = 254
+emoji_menu_enabled = false
+caret_blink = true
+
+[node name="PassLabelContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=1777559424]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/PassLabelContainer" unique_id=101958396]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "password"
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/PassLabelContainer" unique_id=1502647483]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "required"
+horizontal_alignment = 2
+
+[node name="Password" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=1566574408]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_previous = NodePath("../Email")
+theme_override_font_sizes/font_size = 28
+placeholder_text = "type_password"
+max_length = 24
+keep_editing_on_text_submit = true
+secret = true
+
+[node name="PrivacyPolicy" type="RichTextLabel" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=1024496480]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.85098, 0.968627, 1, 1)
+bbcode_enabled = true
+text = "By clicking Register, you agree to our [color=orange][url=https://www.enigmadevstudios.com/upload-labs-privacy]Privacy Policy[/url][/color]."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Error" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=478687103]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.28849697, 0.20627153, 1)
+text = "Invalid credentials"
+horizontal_alignment = 1
+
+[node name="Register" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=1735044329]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "register"
+
+[node name="Return" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register" unique_id=865316375]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "return"
+
+[node name="Account" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" unique_id=426888154]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_tab_index = 3
+
+[node name="InfoContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account" unique_id=1102627111]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="User" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/InfoContainer" unique_id=1905336514]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Logged In as SirTodd"
+
+[node name="Verification" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/InfoContainer" unique_id=647786749]
+layout_mode = 2
+text = "Verified"
+vertical_alignment = 1
+
+[node name="Refresh" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/InfoContainer" unique_id=1938353594]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"TabButton"
+icon = ExtResource("17_qq3or")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Slots" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account" unique_id=330722813]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SlotPanel1" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/Slots" unique_id=1096698413 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+has_custom_name = true
+
+[node name="SlotPanel2" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/Slots" unique_id=1228352437 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+
+[node name="SlotPanel3" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/Slots" unique_id=1375604885 instance=ExtResource("9_3rk5c")]
+layout_mode = 2
+
+[node name="Verification" type="RichTextLabel" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account" unique_id=1362660604]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.2901961, 0.20784314, 1)
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "verification_required"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Logout" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account" unique_id=430994866]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+text = "log_out"
+
+[node name="Switch(For later use)" type="Panel" parent="VBoxContainer/GooseMenuPanel/Settings" unique_id=173880205]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_type_variation = &"MenuPanelTitle"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)" unique_id=315409004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Settings" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer" unique_id=826562245]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 48
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+button_pressed = true
+icon = ExtResource("1_dqoid")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Save" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer" unique_id=705063202]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 48
+theme_override_font_sizes/font_size = 28
+disabled = true
+toggle_mode = true
+icon = ExtResource("18_vc1du")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Customizations" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer" unique_id=399479835]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 48
+theme_override_font_sizes/font_size = 28
+disabled = true
+toggle_mode = true
+icon = ExtResource("19_1vcdu")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Stats" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer" unique_id=1619512832]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 48
+theme_override_font_sizes/font_size = 28
+disabled = true
+toggle_mode = true
+icon = ExtResource("20_e1vff")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Account" type="Button" parent="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer" unique_id=337827497]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"TabButton"
+theme_override_constants/icon_max_width = 48
+disabled = true
+toggle_mode = true
+icon = ExtResource("21_mu6et")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="drag_ended" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer/HSlider" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_speed_slider_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer/LineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_speed_label_changed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Steam" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_steam_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Github" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_github_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/CreditsButton" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_credits_button_pressed"]
+[connection signal="visibility_changed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/CreditsButton" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/CreditsButton" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/PanelContainer" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_credits_container_visibility_changed"]
+[connection signal="meta_clicked" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/PanelContainer/Label" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits" method="_on_label_meta_clicked"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/SaveOptions/Sync" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_sync_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Save(For later use)/SaveOptions/Wipe" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_wipe_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/Email" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_sign_in_email_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/Password" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_sign_in_password_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/PasswordReset" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_password_reset_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/SignIn" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_sign_in_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/Register" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_sign_in_register_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/SignInOptions/GoogleSignIn" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_google_sign_in_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/SignInOptions/DiscordSignIn" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_discord_sign_in_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/SignIn/SignInCancel" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_sign_in_cancel_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover/Email" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_recover_email_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover/Send" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_send_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Recover/Return" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_recover_return_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/Username" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_register_username_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/Email" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_register_email_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/Password" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_register_password_text_submitted"]
+[connection signal="meta_clicked" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/PrivacyPolicy" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_privacy_policy_meta_clicked"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/Register" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_register_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Register/Return" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/InfoContainer/Refresh" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_refresh_pressed"]
+[connection signal="meta_clicked" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/Verification" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_verification_meta_clicked"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer/Account/Logout" to="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Account(For later use)/ScrollContainer/MarginContainer/TabContainer" method="_on_logout_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer/Settings" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer/Save" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_save_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer/Customizations" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_customizations_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer/Stats" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/Switch(For later use)/ButtonsContainer/Account" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_account_pressed"]

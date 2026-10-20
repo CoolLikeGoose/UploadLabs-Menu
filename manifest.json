@@ -1,0 +1,25 @@
+{
+	"name": "GooseMenu",
+	"namespace": "CoolLikeGoose",
+	"version_number": "1.0.0",
+	"description": "Mod menu",
+	"website_url": "https://github.com/CoolLikeGoose",
+	"dependencies": [
+		
+	],
+	"extra": {
+		"godot": {
+			"authors": ["CoolLikeGoose"],
+			"tags": [],
+			"description_rich": "",
+			"optional_dependencies": [],
+			"load_before": [],
+			"incompatibilities": [
+				
+			],
+			"compatible_mod_loader_version": ["7.0.0"],
+			"compatible_game_version": ["3.0.0"],
+			"config_schema": {}
+		}
+	}
+}
