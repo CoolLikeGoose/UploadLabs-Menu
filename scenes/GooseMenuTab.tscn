@@ -129,7 +129,144 @@ layout_mode = 2
 text = "1"
 placeholder_text = "1"
 alignment = 1
-max_length = 6
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="ResourcesEdit" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1015561858]
+layout_mode = 2
+
+[node name="ResLabel" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit" unique_id=1348751413]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "Resources"
+
+[node name="Row1" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit" unique_id=908032051]
+layout_mode = 2
+theme_override_constants/separation = 29
+
+[node name="Tokens" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1" unique_id=781168274]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Tokens" unique_id=899221415]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 28
+text = "Tokens"
+
+[node name="TokenLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Tokens" unique_id=1685785603]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "100k"
+alignment = 1
+max_length = 10
+emoji_menu_enabled = false
+
+[node name="Money" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1" unique_id=1756203267]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Money" unique_id=1370627031]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 28
+text = "Money"
+
+[node name="MoneyLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Money" unique_id=1611263593]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "100k"
+alignment = 1
+max_length = 10
+emoji_menu_enabled = false
+
+[node name="Science" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1" unique_id=2018025735]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Science" unique_id=1772830109]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 28
+text = "Science"
+
+[node name="ScienceLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Science" unique_id=1160133345]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "100k"
+alignment = 1
+max_length = 10
+emoji_menu_enabled = false
+
+[node name="ResourcesEdit2" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1326929326]
+layout_mode = 2
+
+[node name="ResLabel" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2" unique_id=816276483]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "Points"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2" unique_id=1801169073]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HackPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer" unique_id=33163326]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint" unique_id=792280678]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Hack points"
+
+[node name="hackLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint" unique_id=1634414139]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="OptPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer" unique_id=387183132]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint" unique_id=1845372156]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Optimization"
+
+[node name="optLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint" unique_id=950143941]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="AppPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer" unique_id=99403692]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/AppPoint" unique_id=1908358020]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Application"
+
+[node name="appLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/AppPoint" unique_id=791952137]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
 emoji_menu_enabled = false
 
 [node name="Links" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1371127204]
@@ -1346,6 +1483,12 @@ expand_icon = true
 
 [connection signal="drag_ended" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer/HSlider" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_speed_slider_changed"]
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer/LineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_speed_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Tokens/TokenLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_token_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Money/MoneyLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_money_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Science/ScienceLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_science_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint/hackLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_hacking_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint/optLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_optimization_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/AppPoint/appLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_app_label_changed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Steam" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_steam_pressed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Github" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_github_pressed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/CreditsButton" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_credits_button_pressed"]
