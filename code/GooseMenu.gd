@@ -1,5 +1,7 @@
 extends Control
 
+var regex_number = RegEx.new()
+
 #Speed modifier
 @onready var speed_slider: HSlider = $TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer/HSlider
 @onready var speed_reset: Button = $TabContainer/Preferences/MarginContainer/SettingsContainer/GameSpeed/LabelContainer/Reset
@@ -15,30 +17,32 @@ func _on_speed_slider_changed(value_changed: bool) -> void:
 	_on_speed_changed(speed_slider.value)
 
 func _on_speed_label_changed(new_text: String) -> void:
-	var regex = RegEx.new()
-	regex.compile("[^0-9.]")
-	var clean_text = regex.sub(new_text, "", true)
-	
+	var clean_text = regex_number.sub(new_text, "", true)
+
 	if clean_text != new_text:
 		speed_line_edit.text = clean_text
-		#speed_line_edit.caret_column = clean_text.length()
-		
-	print("GSD: new_text: *" + new_text + "*")
-	print("GSD: clean_te: *" + clean_text + "*")
-	
+
 	if clean_text != "" and clean_text != ".":
-		var val = clean_text.to_float()
+		var val = clean_text.to_int()
 		_on_speed_changed(val)
-		speed_slider.value = val
 
 func _update_speed_ui(value: float) -> void:
 	speed_slider.value = value
-	speed_line_edit.text = str(snappedf(value, 1))
+	speed_line_edit.text = str(int(value))
+
+# Buttons
+
 
 func _ready() -> void:
+	regex_number.compile("[^0-9]")
 	if speed_slider:
-		speed_slider.value = Engine.time_scale
+		speed_slider.value = 1
 		speed_slider.connect("value_changed", Callable(self, "_on_speed_changed"))
+
+func _process(delta: float) -> void:
+	if Globals and Attributes:
+		var max_time = Attributes.get_attribute("max_rest_time")
+		Globals.offline_time = max_time
 
 	#if add_money_btn:
 		#add_money_btn.connect("pressed", Callable(self, "_on_add_money_pressed"))
