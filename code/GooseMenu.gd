@@ -98,23 +98,42 @@ func _on_science_label_changed(new_text: String) -> void:
 		science_line_edit.clear()
 
 # Points
-@onready var hack_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint/hackLineEdit
-func _on_hacking_label_changed(new_text: String) -> void:
+@onready var hack_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/HackPoint/hackLineEdit
+func _on_hack_line_edit_text_submitted(new_text: String) -> void:
 	if Attributes:
 		Attributes.apply_attribute("hack_points", [convert_to_float_number(new_text), 0, 0])
 		hack_line_edit.clear()
 		
-@onready var opt_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint/optLineEdit
-func _on_optimization_label_changed(new_text: String) -> void:
+@onready var opt_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/OptPoint/optLineEdit
+func _on_opt_line_edit_text_submitted(new_text: String) -> void:
 	if Attributes:
 		Attributes.apply_attribute("optimization", [convert_to_float_number(new_text), 0, 0])
 		opt_line_edit.clear()
-		
-@onready var app_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/AppPoint/appLineEdit
-func _on_app_label_changed(new_text: String) -> void:
+
+@onready var app_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/AppPoint/appLineEdit
+func _on_app_line_edit_text_submitted(new_text: String) -> void:
 	if Attributes:
 		Attributes.apply_attribute("application", [convert_to_float_number(new_text), 0, 0])
 		app_line_edit.clear()
+
+# Advanced research
+@onready var tech_res_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/TechPoint/techResLineEdit
+func _on_tech_res_line_edit_text_submitted(new_text: String) -> void:
+	if Attributes:
+		Attributes.apply_attribute("tech_research", [convert_to_float_number(new_text), 0, 0])
+		tech_res_line_edit.clear()
+
+@onready var hack_res_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/HackPoint/hackResLineEdit
+func _on_hack_res_line_edit_text_submitted(new_text: String) -> void:
+	if Attributes:
+		Attributes.apply_attribute("hack_research", [convert_to_float_number(new_text), 0, 0])
+		hack_res_line_edit.clear()
+
+@onready var code_res_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/CodePoint/codeResLineEdit
+func _on_code_res_line_edit_text_submitted(new_text: String) -> void:
+	if Attributes:
+		Attributes.apply_attribute("code_research", [convert_to_float_number(new_text), 0, 0])
+		code_res_line_edit.clear()
 
 func _ready() -> void:
 	regex_number.compile("[^0-9]")

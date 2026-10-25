@@ -99,7 +99,7 @@ theme_override_constants/margin_right = 20
 
 [node name="SettingsContainer" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer" unique_id=1866694520]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
 
 [node name="GameSpeed" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1342310696]
 layout_mode = 2
@@ -139,7 +139,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 32
-text = "Resources"
+text = "Resources (Set amount)"
 
 [node name="Row1" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit" unique_id=908032051]
 layout_mode = 2
@@ -202,67 +202,134 @@ alignment = 1
 max_length = 10
 emoji_menu_enabled = false
 
-[node name="ResourcesEdit2" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1326929326]
+[node name="PointsEdit" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1326929326]
 layout_mode = 2
 
-[node name="ResLabel" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2" unique_id=816276483]
+[node name="PointsLabel" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit" unique_id=816276483]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 32
-text = "Points"
+text = "Points (Add amount)"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2" unique_id=1801169073]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit" unique_id=1801169073]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="HackPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer" unique_id=33163326]
+[node name="HackPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer" unique_id=33163326]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 29
 
-[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint" unique_id=792280678]
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/HackPoint" unique_id=792280678]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 28
 text = "Hack points"
 
-[node name="hackLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint" unique_id=1634414139]
+[node name="hackLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/HackPoint" unique_id=1634414139]
 layout_mode = 2
 placeholder_text = "100"
 alignment = 1
 max_length = 4
 emoji_menu_enabled = false
 
-[node name="OptPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer" unique_id=387183132]
+[node name="OptPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer" unique_id=387183132]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 29
 
-[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint" unique_id=1845372156]
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/OptPoint" unique_id=1845372156]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 28
 text = "Optimization"
 
-[node name="optLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint" unique_id=950143941]
+[node name="optLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/OptPoint" unique_id=950143941]
 layout_mode = 2
 placeholder_text = "100"
 alignment = 1
 max_length = 4
 emoji_menu_enabled = false
 
-[node name="AppPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer" unique_id=99403692]
+[node name="AppPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer" unique_id=99403692]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 29
 
-[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/AppPoint" unique_id=1908358020]
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/AppPoint" unique_id=1908358020]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 28
 text = "Application"
 
-[node name="appLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/AppPoint" unique_id=791952137]
+[node name="appLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/AppPoint" unique_id=791952137]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="AdvResearchEdit" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=669867708]
+layout_mode = 2
+
+[node name="AdvResLabel" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit" unique_id=1542118878]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "Advanced Reaserch (Add amount)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit" unique_id=2127667369]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TechPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer" unique_id=534371048]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/TechPoint" unique_id=1449068028]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Tech"
+
+[node name="techResLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/TechPoint" unique_id=1863115347]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="HackPoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer" unique_id=506971525]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/HackPoint" unique_id=1641663032]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Hack"
+
+[node name="hackResLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/HackPoint" unique_id=1697519357]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="CodePoint" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer" unique_id=1938275097]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/CodePoint" unique_id=2003632006]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Code"
+
+[node name="codeResLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/CodePoint" unique_id=295805091]
 layout_mode = 2
 placeholder_text = "100"
 alignment = 1
@@ -1486,8 +1553,12 @@ expand_icon = true
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Tokens/TokenLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_token_label_changed"]
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Money/MoneyLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_money_label_changed"]
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit/Row1/Science/ScienceLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_science_label_changed"]
-[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/HackPoint/hackLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_hacking_label_changed"]
-[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/ResourcesEdit2/HBoxContainer/OptPoint/optLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_optimization_label_changed"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/HackPoint/hackLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_hack_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/OptPoint/optLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_opt_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/PointsEdit/HBoxContainer/AppPoint/appLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_app_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/TechPoint/techResLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_tech_res_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/HackPoint/hackResLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_hack_res_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/CodePoint/codeResLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_code_res_line_edit_text_submitted"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Steam" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_steam_pressed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Github" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_github_pressed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/CreditsButton" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_credits_button_pressed"]
