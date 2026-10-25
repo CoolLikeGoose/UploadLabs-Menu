@@ -135,6 +135,19 @@ func _on_code_res_line_edit_text_submitted(new_text: String) -> void:
 		Attributes.apply_attribute("code_research", [convert_to_float_number(new_text), 0, 0])
 		code_res_line_edit.clear()
 
+# Alien things
+@onready var alien_tech_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/AlienTech/alienTechLineEdit
+func _on_alien_tech_line_edit_text_submitted(new_text: String) -> void:
+	if Globals and "currencies" in Globals:
+		Globals.currencies["alien_research"] = convert_to_float_number(new_text)
+		alien_tech_line_edit.clear()
+
+@onready var entropy_line_edit: LineEdit = $TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/Entropy/entropyLineEdit
+func _on_entropy_line_edit_text_submitted(new_text: String) -> void:
+	if Globals:
+		Globals.add_entropy_levels(convert_to_float_number(new_text))
+		entropy_line_edit.clear()
+
 func _ready() -> void:
 	regex_number.compile("[^0-9]")
 	if speed_slider:

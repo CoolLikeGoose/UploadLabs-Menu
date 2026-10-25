@@ -336,6 +336,56 @@ alignment = 1
 max_length = 4
 emoji_menu_enabled = false
 
+[node name="AlienThingsEdit" type="VBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1010479805]
+layout_mode = 2
+
+[node name="AlienThingsLabel" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit" unique_id=1806484251]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "Alien things (Add amount)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit" unique_id=812151303]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="AlienTech" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer" unique_id=1860542739]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/AlienTech" unique_id=250352923]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Alien Tech"
+
+[node name="alienTechLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/AlienTech" unique_id=1776832450]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "100k"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="Entropy" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer" unique_id=1557101356]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 29
+
+[node name="Label" type="Label" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/Entropy" unique_id=757141081]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Entropy"
+
+[node name="entropyLineEdit" type="LineEdit" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/Entropy" unique_id=167336539]
+layout_mode = 2
+placeholder_text = "100"
+alignment = 1
+max_length = 4
+emoji_menu_enabled = false
+
 [node name="Links" type="HBoxContainer" parent="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer" unique_id=1371127204]
 layout_mode = 2
 theme_override_constants/separation = 10
@@ -1559,6 +1609,8 @@ expand_icon = true
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/TechPoint/techResLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_tech_res_line_edit_text_submitted"]
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/HackPoint/hackResLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_hack_res_line_edit_text_submitted"]
 [connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AdvResearchEdit/HBoxContainer/CodePoint/codeResLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_code_res_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/AlienTech/alienTechLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_alien_tech_line_edit_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/AlienThingsEdit/HBoxContainer/Entropy/entropyLineEdit" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_entropy_line_edit_text_submitted"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Steam" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_steam_pressed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Links/Github" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_github_pressed"]
 [connection signal="pressed" from="VBoxContainer/GooseMenuPanel/Settings/TabContainer/Preferences/MarginContainer/SettingsContainer/Example/Credits/CreditsButton" to="VBoxContainer/GooseMenuPanel/Settings" method="_on_credits_button_pressed"]

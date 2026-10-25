@@ -1,16 +1,16 @@
 {
 	"name": "GooseMenu",
 	"namespace": "CoolLikeGoose",
-	"version_number": "1.0.0",
+	"version_number": "1.1.0",
 	"description": "Mod menu",
-	"website_url": "https://github.com/CoolLikeGoose",
+	"website_url": "https://github.com/CoolLikeGoose/UploadLabs-Menu",
 	"dependencies": [
 		
 	],
 	"extra": {
 		"godot": {
 			"authors": ["CoolLikeGoose"],
-			"tags": [],
+			"tags": ["QOL"],
 			"description_rich": "",
 			"optional_dependencies": [],
 			"load_before": [],
