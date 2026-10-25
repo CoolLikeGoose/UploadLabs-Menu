@@ -129,7 +129,9 @@ func _process(delta: float) -> void:
 
 # Links handlers
 func _on_steam_pressed() -> void:
-	pass
+	OS.shell_open("https://github.com/CoolLikeGoose/UploadLabs-Menu")
+	Sound.play("click")
 
 func _on_github_pressed() -> void:
-	pass
+	OS.shell_open("https://github.com/CoolLikeGoose/UploadLabs-Menu/")
+	Sound.play("click")
